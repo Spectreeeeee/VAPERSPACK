@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VAPERSPACK.ShopPage"
+             Title="Shop">
+
+    <Grid>
+        <!-- Full-Screen Background Image -->
+        <Image 
+            Source="bg.png" 
+            HorizontalOptions="FillAndExpand" 
+            VerticalOptions="FillAndExpand" 
+            Aspect="AspectFill" />
+
+        <ScrollView>
+            <VerticalStackLayout Padding="20" Spacing="15">
+
+                <!-- Product Template -->
+                <!-- Product 1: VapeM8 -->
+                <Grid Padding="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="1.5*" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image Grid.Column="0" Source="vape1.png" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
+                    <Label Grid.Column="1" Text="VapeM8" FontSize="20" VerticalOptions="Center" />
+
+                    <!-- Quantity Controls -->
+                    <HorizontalStackLayout Grid.Column="2" HorizontalOptions="Center" Spacing="5">
+                        <Button Text="-" WidthRequest="30" Clicked="DecrementQuantity_Clicked" CommandParameter="VapeM8" />
+                        <Label x:Name="QuantityLabelVapeM8" Text="1" VerticalOptions="Center" FontSize="18" />
+                        <Button Text="+" WidthRequest="30" Clicked="IncrementQuantity_Clicked" CommandParameter="VapeM8" />
+                    </HorizontalStackLayout>
+
+                    <Button Grid.Column="3" Text="Add To Cart" CommandParameter="VapeM8" Clicked="AddToCart_Clicked" />
+                    <Button Grid.Column="4" Text="Delete" CommandParameter="VapeM8" Clicked="DeleteProduct_Clicked" />
+                </Grid>
+                <Label Text="₱330" FontSize="18" HorizontalOptions="End" />
+
+                <!-- Repeat for other products -->
+                <!-- Product 2: Elbaf -->
+                <Grid Padding="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="1.5*" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image Grid.Column="0" Source="vape2.png" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
+                    <Label Grid.Column="1" Text="Elbaf" FontSize="20" VerticalOptions="Center" />
+
+                    <HorizontalStackLayout Grid.Column="2" HorizontalOptions="Center" Spacing="5">
+                        <Button Text="-" WidthRequest="30" Clicked="DecrementQuantity_Clicked" CommandParameter="Elbaf" />
+                        <Label x:Name="QuantityLabelElbaf" Text="1" VerticalOptions="Center" FontSize="18" />
+                        <Button Text="+" WidthRequest="30" Clicked="IncrementQuantity_Clicked" CommandParameter="Elbaf" />
+                    </HorizontalStackLayout>
+
+                    <Button Grid.Column="3" Text="Add To Cart" CommandParameter="Elbaf" Clicked="AddToCart_Clicked" />
+                    <Button Grid.Column="4" Text="Delete" CommandParameter="Elbaf" Clicked="DeleteProduct_Clicked" />
+                </Grid>
+                <Label Text="₱400" FontSize="18" HorizontalOptions="End" />
+
+                <!-- Product 3: Aspire -->
+                <Grid Padding="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="1.5*" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image Grid.Column="0" Source="vape3.png" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
+                    <Label Grid.Column="1" Text="Aspire" FontSize="20" VerticalOptions="Center" />
+
+                    <HorizontalStackLayout Grid.Column="2" HorizontalOptions="Center" Spacing="5">
+                        <Button Text="-" WidthRequest="30" Clicked="DecrementQuantity_Clicked" CommandParameter="Aspire" />
+                        <Label x:Name="QuantityLabelAspire" Text="1" VerticalOptions="Center" FontSize="18" />
+                        <Button Text="+" WidthRequest="30" Clicked="IncrementQuantity_Clicked" CommandParameter="Aspire" />
+                    </HorizontalStackLayout>
+
+                    <Button Grid.Column="3" Text="Add To Cart" CommandParameter="Aspire" Clicked="AddToCart_Clicked" />
+                    <Button Grid.Column="4" Text="Delete" CommandParameter="Aspire" Clicked="DeleteProduct_Clicked" />
+                </Grid>
+                <Label Text="₱450" FontSize="18" HorizontalOptions="End" />
+
+                <!-- Product 4: Upends -->
+                <Grid Padding="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="1.5*" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image Grid.Column="0" Source="vape4.png" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
+                    <Label Grid.Column="1" Text="Upends" FontSize="20" VerticalOptions="Center" />
+
+                    <HorizontalStackLayout Grid.Column="2" HorizontalOptions="Center" Spacing="5">
+                        <Button Text="-" WidthRequest="30" Clicked="DecrementQuantity_Clicked" CommandParameter="Upends" />
+                        <Label x:Name="QuantityLabelUpends" Text="1" VerticalOptions="Center" FontSize="18" />
+                        <Button Text="+" WidthRequest="30" Clicked="IncrementQuantity_Clicked" CommandParameter="Upends" />
+                    </HorizontalStackLayout>
+
+                    <Button Grid.Column="3" Text="Add To Cart" CommandParameter="Upends" Clicked="AddToCart_Clicked" />
+                    <Button Grid.Column="4" Text="Delete" CommandParameter="Upends" Clicked="DeleteProduct_Clicked" />
+                </Grid>
+                <Label Text="₱500" FontSize="18" HorizontalOptions="End" />
+
+                <!-- Total and Checkout -->
+                <Label x:Name="TotalItemsLabel" Text="Total Items: 0" FontSize="20" HorizontalOptions="Center" />
+                <Label x:Name="TotalAmountLabel" Text="Total Amount: ₱0" FontSize="20" HorizontalOptions="Center" />
+
+                <!-- Buttons for Proceed to Cart -->
+                <HorizontalStackLayout HorizontalOptions="CenterAndExpand" Spacing="20">
+                    <Button Text="Proceed to Checkout" BackgroundColor="LightGreen" TextColor="White" Clicked="ProceedToCheckout_Clicked" />
+                    <Button Text="Clear Cart" BackgroundColor="Red" TextColor="White" Clicked="ClearCart_Clicked" />
+                </HorizontalStackLayout>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

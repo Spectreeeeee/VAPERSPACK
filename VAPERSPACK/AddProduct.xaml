@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VAPERSPACK.AddProduct"
+             Title="Add Product">
+    <Grid>
+        <!-- Full-Screen Background Image -->
+        <Image Source="bg.png"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand"
+               Aspect="AspectFill" />
+
+        <ScrollView>
+            <VerticalStackLayout Padding="20" Spacing="15">
+
+                <!-- Product Name Picker -->
+                <Label Text="Product Name" FontSize="18" />
+                <Picker x:Name="ProductNamePicker" SelectedIndexChanged="OnProductNameChanged">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Vape1</x:String>
+                            <x:String>Vape2</x:String>
+                            <x:String>Vape3</x:String>
+                            <x:String>Vape4</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <!-- Product Price Picker -->
+                <Label Text="Product Price" FontSize="18" />
+                <Picker x:Name="ProductPricePicker" SelectedIndexChanged="OnProductPriceChanged">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>330</x:String>
+                            <x:String>400</x:String>
+                            <x:String>450</x:String>
+                            <x:String>500</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <!-- Product Quantity Picker -->
+                <Label Text="Product Quantity" FontSize="18" />
+                <Picker x:Name="ProductQuantityPicker">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>1</x:String>
+                            <x:String>2</x:String>
+                            <x:String>3</x:String>
+                            <x:String>4</x:String>
+                            <x:String>5</x:String>
+                            <x:String>6</x:String>
+                            <x:String>7</x:String>
+                            <x:String>8</x:String>
+                            <x:String>9</x:String>
+                            <x:String>10</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <!-- Add Product Button -->
+                <Button Text="Add Product" Clicked="OnAddProductClicked" />
+
+                <!-- Image to Display Product -->
+                <Image x:Name="ProductImage" Source="placeholder.png" HeightRequest="200" WidthRequest="200" HorizontalOptions="Center" />
+
+                <!-- Display added product details -->
+                <Label x:Name="ProductDetailsLabel" Text="" FontSize="18" HorizontalOptions="Center" />
+
+                <!-- Product List (Displays added products dynamically) -->
+                <StackLayout x:Name="ProductListStackLayout" Spacing="15" />
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

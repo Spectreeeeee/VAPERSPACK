@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VAPERSPACK.Browser"
+             Title="Browser">
+
+    <Grid>
+        <!-- Full-Screen Background Image -->
+        <Image 
+            Source="bg.png" 
+            HorizontalOptions="FillAndExpand" 
+            VerticalOptions="FillAndExpand" 
+            Aspect="AspectFill" />
+
+        <!-- Semi-transparent overlay for better text contrast -->
+        <BoxView 
+            Color="Black" 
+            Opacity="0.3" 
+            HorizontalOptions="FillAndExpand" 
+            VerticalOptions="FillAndExpand" />
+
+        <!-- Scrollable Content -->
+        <ScrollView Padding="20,10">
+            <VerticalStackLayout
+                Padding="10"
+                Spacing="30"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="StartAndExpand">
+
+                <!-- VapeM8 Section -->
+                <StackLayout Spacing="10" HorizontalOptions="CenterAndExpand">
+                    <Label
+                        Text="VapeM8"
+                        FontSize="22"
+                        FontAttributes="Bold"
+                        BackgroundColor="DarkSlateGray"
+                        TextColor="White"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        WidthRequest="200"
+                        Padding="5"
+                        AutomationProperties.Name="Product Name: VapeM8" />
+                    <Image 
+                        Source="vape1.png"
+                        HeightRequest="200"
+                        WidthRequest="200"
+                        HorizontalOptions="Center"
+                        AutomationProperties.Name="Image of VapeM8 product" />
+                    
+                </StackLayout>
+
+                <!-- Elbaf Section -->
+                <StackLayout Spacing="10" HorizontalOptions="CenterAndExpand">
+                    <Label
+                        Text="Elbaf"
+                        FontSize="22"
+                        FontAttributes="Bold"
+                        BackgroundColor="DarkSlateGray"
+                        TextColor="White"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        WidthRequest="200"
+                        Padding="5"
+                        AutomationProperties.Name="Product Name: Elbaf" />
+                    <Image 
+                        Source="vape2.png" 
+                        HeightRequest="200"
+                        WidthRequest="200"
+                        HorizontalOptions="Center"
+                        AutomationProperties.Name="Image of Elbaf product" />
+           
+                </StackLayout>
+
+                <!-- Aspire Section -->
+                <StackLayout Spacing="10" HorizontalOptions="CenterAndExpand">
+                    <Label
+                        Text="Aspire"
+                        FontSize="22"
+                        FontAttributes="Bold"
+                        BackgroundColor="DarkSlateGray"
+                        TextColor="White"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        WidthRequest="200"
+                        Padding="5"
+                        AutomationProperties.Name="Product Name: Aspire" />
+                    <Image 
+                        Source="vape3.png"
+                        HeightRequest="200"
+                        WidthRequest="200"
+                        HorizontalOptions="Center"
+                        AutomationProperties.Name="Image of Aspire product" />
+                   
+                </StackLayout>
+
+                <!-- Upends Section -->
+                <StackLayout Spacing="10" HorizontalOptions="CenterAndExpand">
+                    <Label
+                        Text="Upends"
+                        FontSize="22"
+                        FontAttributes="Bold"
+                        BackgroundColor="DarkSlateGray"
+                        TextColor="White"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        WidthRequest="200"
+                        Padding="5"
+                        AutomationProperties.Name="Product Name: Upends" />
+                    <Image 
+                        Source="vape4.png"
+                        HeightRequest="200"
+                        WidthRequest="200"
+                        HorizontalOptions="Center" />
+                </StackLayout>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

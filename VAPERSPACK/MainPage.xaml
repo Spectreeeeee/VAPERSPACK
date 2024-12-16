@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VAPERSPACK.MainPage">
+
+    <!-- Use Grid for layering -->
+    <Grid>
+        <!-- Full-Screen Background Image -->
+        <Image 
+            Source="bg.png" 
+            HorizontalOptions="FillAndExpand" 
+            VerticalOptions="FillAndExpand" 
+            Aspect="AspectFill" />
+
+        <!-- Content Layer -->
+        <ScrollView>
+            <VerticalStackLayout
+                Padding="20"
+                Spacing="20"
+                VerticalOptions="CenterAndExpand">
+
+                <!-- Transparent Button -->
+                <Button
+                    x:Name="GoToShop"
+                    Text="Go to shop"
+                    Clicked="GoToShop_Clicked"
+                    BackgroundColor="PaleVioletRed"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    Padding="10" />
+
+                <!-- Add Product Button -->
+                <Button
+                    x:Name="AddProduct"
+                    Text="Add Product"
+                    Clicked="AddProduct_Clicked"
+                    BackgroundColor="PaleVioletRed"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    Padding="10" />
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VAPERSPACK.CartPage"
+             Title="Cart">
+    <Grid>
+        <!-- Full-Screen Background Image -->
+        <Image 
+        Source="bg.png" 
+        HorizontalOptions="FillAndExpand" 
+        VerticalOptions="FillAndExpand" 
+        Aspect="AspectFill" />
+
+        <Grid>
+        <ScrollView>
+            <VerticalStackLayout Padding="20" Spacing="15">
+
+                
+                <Label x:Name="CartItemsLabel" Text="No items in the cart." FontSize="18" HorizontalOptions="Center" />
+
+            
+                <Label x:Name="TotalAmountLabel" Text="Total: ₱0" FontSize="20" HorizontalOptions="Center" />
+
+                <Button Text="Proceed to Payment" BackgroundColor="LightGreen" TextColor="White" Clicked="ProceedToPayment_Clicked" />
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+    </Grid>
+</ContentPage>
